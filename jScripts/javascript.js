@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     searchBtn.addEventListener("click", searchFunc);
   }
 
-    
-
+  
 });
 
 
@@ -27,6 +26,7 @@ window.onscroll = function() {
     }
   }
 
+  //פונקציית חיפוש
   function searchFunc() {
     const searchTerm = document.getElementById("search-box");
     // נמצא את כל הכותרות
@@ -36,7 +36,8 @@ window.onscroll = function() {
 
     for (var i = 0; i < dropdown.length; i++) {
       if (dropdown[i].innerHTML.includes(searchTerm.value)) {
-        console.log(dropdown[i].href);
+        console.log(dropdown[i].href); //הלינק הרלוונטי על פי הנושא
+
        const toast = document.getElementById('toastSearch');
         toast.show();
     }
