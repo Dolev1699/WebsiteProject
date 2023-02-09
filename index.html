@@ -42,10 +42,10 @@
           <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">תכנים</a>
           <div class="dropdown-menu m-0">
               <a href="startpage.html" class="dropdown-item">איך מתחילים</a>
-              <a href="#" class="dropdown-item">סוגי מקורות מידע</a>
-              <a href="#" class="dropdown-item">מאגרי מידע</a>
-              <a href="#" class="dropdown-item">חיפוש מאמרים</a>
-              <a href="#" class="dropdown-item">רשימה ביבליוגרפית</a>
+              <a href="startpage.html" class="dropdown-item">סוגי מקורות מידע</a>
+              <a href="startpage.html" class="dropdown-item">מאגרי מידע</a>
+              <a href="startpage.html" class="dropdown-item">חיפוש מאמרים</a>
+              <a href="startpage.html" class="dropdown-item">רשימה ביבליוגרפית</a>
           </div>
       </div>        
       </li>
@@ -55,6 +55,7 @@
     </ul>
     <form class="form-inline mb-2 mb-md-0 d-flex">
       <input class="form-control mr-2" type="search" placeholder="חיפוש נושא" aria-label="Search" id="search-box">
+      <div id="search-dropdown" class="dropdown-menu m-0" style="display:none;"></div>
       <button class="btn btn-outline-primary" type="submit" id="search-btn">
         <i class="fa fa-search"></i>
       </button>
@@ -149,26 +150,10 @@
 </div>
 <!--TOAST-->
 <!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
-
-  <!-- Then put toasts within -->
-  <div class="toast" id="toastSearch" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <strong class="mr-auto"></strong>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
-</div>
 </Main>
 
 
-
-<footer class="bg-light py-3">
+  <footer class="bg-light py-3">
   <div class="container">
     <p class="text-center text-secondary">Copyright &copy; עוצב ופותח על ידי קורל ששון ודולב קליינר במסגרת פרוייקט גמר- טכנולוגיות למידה 2023</p>
     <div class="d-flex justify-content-center">
@@ -177,7 +162,7 @@
       <a class="text-secondary mx-3" href="#">לחיפוש בספרייה</a>
     </div>
   </div>
-</footer>
+  </footer>
 </body>
 
 </html>
