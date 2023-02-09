@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     searchBtn.addEventListener("click", searchFunc);
   }
 
-  
+ 
 });
 
 
@@ -25,12 +25,17 @@ window.onscroll = function() {
       navbar.classList.remove("navbar-dark");
     }
   }
+ 
 
 
 //פונקציית חיפוש
 function searchFunc(event) {
   event.preventDefault();
   const searchTerm = document.getElementById("search-box").value;
+  if (!searchTerm) {
+    return;
+  }
+
   const dropdown = document.querySelectorAll(".dropdown-item");
   const relevantLinks = [];
 
@@ -55,21 +60,37 @@ function showLinks(links, event) {
     const item = document.createElement('li');
     item.classList.add('list-group-item');
     const a = document.createElement('a');
+    const dropdown = document.querySelectorAll(".dropdown-item");
+    let text = '';
+    for (var i = 0; i < dropdown.length; i++) {
+      if (dropdown[i].href === link) {
+        text = dropdown[i].innerHTML;
+        break;
+      }
+    }
     a.href = link;
-    a.innerText = link;
+    a.innerText = text;
+    a.classList.add('text-primary');
+    a.classList.add('font-weight-bold');
     item.appendChild(a);
     list.appendChild(item);
   });
   document.getElementById('search-dropdown').innerHTML = '';
   document.getElementById('search-dropdown').appendChild(list);
+  document.getElementById('search-dropdown').classList.add('border', 'border-primary');
   document.getElementById('search-dropdown').style.display = 'block';
 }
+
 
 function showNoResultsMessage() {
   document.getElementById('search-dropdown').innerHTML = '<li class="list-group-item">לא נמצאו תוצאות</li>';
   document.getElementById('search-dropdown').style.display = 'block';
   
 }
+
+
+
+
 
   /*
   //פונקציית חיפוש
