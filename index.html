@@ -55,27 +55,30 @@
     </ul>
     <form class="form-inline mb-2 mb-md-0 d-flex">
       <input class="form-control mr-2" type="search" placeholder="חיפוש נושא" aria-label="Search" id="search-box">
-      <div id="search-dropdown" class="dropdown-menu m-0" style="display:none;">
-      </div>
       <button class="btn btn-outline-primary" type="submit" id="search-btn">
         <i class="fa fa-search"></i>
       </button>
+      <div id="search-dropdown" class="dropdown-menu m-0 position-absolute" style="display:none;margin-top:3rem!important;">
+      </div>
     </form>
   </div>
 </nav>
+
+
+
 
 <!--תפריט ניווט סוף-->
 
 <header>
 <div class="header">
   <div class="container-xxl py-5  hero-header mb-5">
-    
+
     <div class="container my-5 py-5 px-lg-5">
         <div class="row g-5 py-5">
             <div class="col-lg-6 text-center text-lg-start">
                 <h1 class="text-white mb-4 " >אתר ההדרכות הדיגיטליות של ספריית HIT</h1>
                 <p class="text-white pb-3" >כאן תוכלו ללמוד הכל על איך מחפשים מקורות אקדמיים בקלות וביעילות</p>
-                <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3">למאגר ההדרכות</a>
+                <a href="#section1" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3">למאגר ההדרכות</a>
             </div>
             <div class="col-lg-6 text-center text-lg-start">
                 <img class="img-fluid" src="images/6263-removebg-preview.png" alt="">
@@ -86,11 +89,13 @@
     </div>
   </header>
    <Main>
+  
   <div class="container">
     <div class="section-title position-relative text-center mb-5 pb-2">
       <h6 class="position-relative d-inline text-primary ps-4">הדרכות דיגיטליות</h6>
       <h2 class="mt-2">מה תרצו ללמוד היום?</h2>
   </div>
+  <section id="section1"></section>
   <div class="row">
     <div class="col-sm-4 pb-4">
       <div class="card-wrapper">
@@ -98,7 +103,8 @@
         <img src="images/10088.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">איך מתחילים</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">כיצד להגיע לפורטל הספרייה דרך עמדת המידע, כניסה והצגת הממשק, היכרות עם קטלוג הספרייה הצגת אפשרויות החיפוש .
+          </p>
         </div>
       </div>
     </div>
@@ -109,7 +115,8 @@
         <img src="images/6263.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">סוגי מקורות מידע</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text"> מבנה של מאמר אקדמי, סוגי מקורות מידע, ספר, פרויקטי גמר. אמינות של מקור מידע - הערכת מידע באינטרנט. 
+          </p>
         </div>
       </div>
       </div>
@@ -120,7 +127,8 @@
         <img src="images/10088.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">מאגרי מידע</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">מהו מאגר מידע, רשימה של כלל מאגרי המידע הקיימים, היכרות עם מאגרי מידע על פי תחומים, הבדלים בין מאגרים, יתרונות וחסרונות.
+          </p>
         </div>
       </div>
       </div>
@@ -131,7 +139,8 @@
         <img src="images/6263.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">חיפוש מאמרים</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">חיפוש יעיל ונכון בשפה האנגלית, שיטות ואסטרטגיות לחיפוש יעיל אופרטורים בוליאניים מסמך המסכם לוגיקה בוליאנית, מילות מפתח 
+          </p>
         </div>
       </div>
       </div>
@@ -142,7 +151,8 @@
         <img src="images/6263.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">רשימה ביבליוגרפית</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">מה הסגנונות לכתיבת רשימה ביביליוגרפית, כללי ציטוט, כלים טכנולוגיים ליצירת רשימה ביבליוגרפית.
+          </p>
         </div>
       </div>
     </div>
@@ -150,7 +160,6 @@
   </div>
 </div>
 <!--TOAST-->
-<!-- Flexbox container for aligning the toasts -->
 </Main>
 
 

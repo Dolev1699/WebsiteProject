@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     searchBtn.addEventListener("click", searchFunc);
   }
 
+
  
 });
 
@@ -26,8 +27,78 @@ window.onscroll = function() {
     }
   }
  
+  function searchFunc(event) {
+    event.preventDefault();
+    const searchTerm = document.getElementById("search-box").value;
+    if (!searchTerm) {
+      return;
+    }
+  
+    const dropdown = document.querySelectorAll(".dropdown-item");
+    const relevantLinks = [];
+  
+    for (var i = 0; i < dropdown.length; i++) {
+      if (dropdown[i].innerHTML.includes(searchTerm)) {
+        relevantLinks.push(dropdown[i].href);
+      }
+    }
+  
+    if (relevantLinks.length > 0) {
+      showLinks(relevantLinks, event);
+    } else {
+      showNoResultsMessage();
+    }
+  }
+
+  
+  function showLinks(links, event) {
+    event.preventDefault();
+    const list = document.createElement('ul');
+    list.classList.add('list-group');
+    links.forEach(link => {
+      const item = document.createElement('li');
+      item.classList.add('list-group-item');
+      const a = document.createElement('a');
+      const dropdown = document.querySelectorAll(".dropdown-item");
+      let text = '';
+      for (var i = 0; i < dropdown.length; i++) {
+        if (dropdown[i].href === link) {
+          text = dropdown[i].innerHTML;
+          break;
+        }
+      }
+      a.href = link;
+      a.innerText = text;
+      a.classList.add('text-primary');
+      a.classList.add('font-weight-bold');
+      item.appendChild(a);
+      list.appendChild(item);
+    });
+    document.getElementById('search-dropdown').innerHTML = '';
+    document.getElementById('search-dropdown').appendChild(list);
+    document.getElementById('search-dropdown').classList.add('border', 'border-primary');
+    document.getElementById('search-dropdown').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('search-dropdown').style.display = 'none';
+      document.getElementById('search-dropdown').innerHTML = '';
+      document.getElementById('search-dropdown').classList.remove('border', 'border-primary');
+    }, 9000);
+  }
+  
+  function showNoResultsMessage() {
+    const searchDropdown = document.getElementById("search-dropdown");
+    searchDropdown.innerHTML = '<li class="list-group-item">לא נמצאו תוצאות</li>';
+    searchDropdown.style.display = 'block';
+    setTimeout(() => {
+      searchDropdown.style.display = 'none';
+      searchDropdown.innerHTML = '';
+    }, 2000);
+  }
+  
 
 
+
+/*
 //פונקציית חיפוש
 function searchFunc(event) {
   event.preventDefault();
@@ -91,7 +162,7 @@ function showNoResultsMessage() {
 
 
 
-
+*/
   /*
   //פונקציית חיפוש
   function searchFunc() {
