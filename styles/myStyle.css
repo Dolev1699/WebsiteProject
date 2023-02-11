@@ -31,14 +31,23 @@ background-position: center;
 width: 100%;
 }
 .header h1 {
-  color:#539d9d!important;
+  color:#050505!important;
 }
 
 .header p {
-  color: #539d9d !important;
+  color: #0d0d0d !important;
 }
 
+.custom-btn {
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+.custom-btn:hover {
+  background-color: #539d9d; 
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
   .card:hover {
     transform: translateY(-10px);
