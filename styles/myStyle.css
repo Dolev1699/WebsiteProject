@@ -3,13 +3,46 @@
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  header {
+    height: auto;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {}
+
+@media screen and (max-width: 768px) {
+
+  /* עיצוב כרטיסיות בעמוד פנימי מסך קטן*/
+  .cardInnerPage {
+    height: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+ .cardInnerPage img{
+    width: 30%;
+    float: right;
+    object-fit: cover;
+    border-radius: 20px;
+ }
+
+ .cardInnerPage-image-container {
+  padding: 20px;
+}
+
+  .cardInnerPage-body {
+    float: left;
+    width: 30%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+    
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
@@ -22,7 +55,7 @@
     height: auto;
   }
 }
-
+/*ראש עמוד*/
 .header{
 background-image: url('../images/background-Original.jpg');
 background-repeat: no-repeat;
@@ -38,6 +71,10 @@ width: 100%;
   color: #0d0d0d !important;
 }
 
+.headerinpage{
+  height: 50vh;
+}
+
 .custom-btn {
   background-color: #f4f4f4;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -48,6 +85,21 @@ width: 100%;
   transform: scale(1.05);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+
+/*כותרות בעמודים בפניימיים h4*/
+h4{
+  color: #539d9d;
+
+}
+/*לינקים עיצוב*/
+a.my-link {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* כרטיסים עיצוב*/
 
   .card:hover {
     transform: translateY(-10px);
@@ -64,6 +116,7 @@ width: 100%;
 
   }
   
+  /* תפריט ניווט*/
   .navbar {
     padding: 0.5rem 1rem;
     position: fixed;
@@ -97,7 +150,14 @@ width: 100%;
     bottom: 0;
     z-index: 1030;
     overflow-y: auto;
-  } 
+  }
+  
+
+  /*תמונה בתוך כרטיס בעמוד פנימי מסך גדול*/
+
+  .cardInnerPage img{
+    border-radius: 20px;
+ }
  
   /*
 .search-dropdown{

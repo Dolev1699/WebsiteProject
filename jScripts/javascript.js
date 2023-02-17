@@ -16,6 +16,7 @@ window.onscroll = function() {
     changeNavbarColor();
   };
 
+  //שינוי צבע תפריט ניווט
   function changeNavbarColor() {
     var navbar = document.getElementById("navbar");
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -27,6 +28,8 @@ window.onscroll = function() {
     }
   }
  
+
+  // פונקציית חיפוש
   function searchFunc(event) {
     event.preventDefault();
     const searchTerm = document.getElementById("search-box").value;
@@ -50,7 +53,7 @@ window.onscroll = function() {
     }
   }
 
-  
+  // פונקציה הצגת תוצאות חיפוש לינקים
   function showLinks(links, event) {
     event.preventDefault();
     const list = document.createElement('ul');
@@ -85,6 +88,7 @@ window.onscroll = function() {
     }, 9000);
   }
   
+  // פונקציה לא נמצאו תוצאות חיפוש
   function showNoResultsMessage() {
     const searchDropdown = document.getElementById("search-dropdown");
     searchDropdown.innerHTML = '<li class="list-group-item">לא נמצאו תוצאות</li>';
