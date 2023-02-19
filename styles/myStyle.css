@@ -7,6 +7,9 @@
   header {
     height: auto;
   }
+  .headerinpage{
+    height: 40vh;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -42,13 +45,22 @@
     flex-direction: row-reverse;
     
   }
+
+
+  
+
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  .headerinpage{
+    height: 50vh;
+  }
+}
 
 @media (max-width: 1920px) {
   header {
@@ -71,9 +83,6 @@ width: 100%;
   color: #0d0d0d !important;
 }
 
-.headerinpage{
-  height: 50vh;
-}
 
 .custom-btn {
   background-color: #f4f4f4;
@@ -100,7 +109,10 @@ a.my-link {
 }
 
 /* כרטיסים עיצוב*/
-
+.card{
+  border-color: #539d9d;
+--bs-card-border-width: 2px;
+}
   .card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
@@ -155,9 +167,12 @@ a.my-link {
 
   /*תמונה בתוך כרטיס בעמוד פנימי מסך גדול*/
 
+
   .cardInnerPage img{
     border-radius: 20px;
  }
+
+
  
   /*
 .search-dropdown{
