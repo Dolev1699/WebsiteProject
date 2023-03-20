@@ -1,6 +1,6 @@
 //לאחר טעינת העמוד
 document.addEventListener("DOMContentLoaded", function (event) {
-  // פונקציית חיפוש
+  // פונקציית חיפוש מאזין
 
   const searchBtn = document.getElementById("search-btn");
   if (searchBtn) {
