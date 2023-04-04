@@ -7,8 +7,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     searchBtn.addEventListener("click", searchFunc);
   }
 
+  const card = document.getElementById("toEnglishSearchRise");
+  card.addEventListener("click", function() {
+    window.location.href = "englishSearch/englishSearchRise.html";
+    });
 
- 
+    const card2 = document.getElementById("tobooleanRise");
+    card2.addEventListener("click", function() {
+      window.location.href = "boolean/booleanRise.html";
+      });
+
 });
 
 

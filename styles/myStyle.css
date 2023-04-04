@@ -1,6 +1,7 @@
 ﻿body {
     direction: rtl;
     background-color:white;
+   /* font-family: 'Rubik', sans-serif;*/
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -9,7 +10,7 @@
     height: auto;
   }
   .headerinpage{
-    height: 40vh;
+    height:180px;;
   }
 }
 
@@ -23,9 +24,10 @@
 
   /* עיצוב כרטיסיות בעמוד פנימי מסך קטן*/
   .cardInnerPage {
-    height: 30%;
+    height: 115px;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 30px;
   }
  .cardInnerPage img{
     width: 30%;
@@ -38,17 +40,36 @@
   padding: 20px;
 }
 
-  .cardInnerPage-body {
-    float: left;
-    width: 30%;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row-reverse;
-    
-  }
+.cardInnerPage-body {
+  float: left;
+  width: 30%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+}
 
+.cardInnerPage-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.cardInnerPage-body p {
+  overflow: hidden; /* Hide overflowing text */
+}
 
-  
+.cardInnerPage-body h5 {
+  font-size: 14px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.cardInnerPage-body .text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 
 
 }
@@ -59,7 +80,7 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .headerinpage{
-    height: 50vh;
+    height: 58vh;
   }
 }
 
@@ -67,17 +88,23 @@
   header {
     height: auto;
   }
+
+
 }
 /*ראש עמוד*/
 .header{
-background-image: url('../images/Artboard\ 1.png');
+  font-family: 'Rubik', sans-serif;
+background-image: url('../images/headerBack.png');
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 width: 100%;
 }
-.header h1 {
+
+
+.header h2 {
   color:#050505!important;
+  font-weight: 600;
 }
 
 .header p {
@@ -98,10 +125,7 @@ width: 100%;
 
 
 /*כותרות בעמודים בפניימיים h4*/
-h4{
-  color: #539d9d;
 
-}
 /* פירורי לחם לינקים עיצוב*/ 
 a.my-link {
   color: black;
@@ -126,6 +150,7 @@ box-shadow: 0px 0px 10px 0px gray;
   .card-body {
     background-color:white;
     transition: all 0.2s ease-in-out;
+    height: 190px;
   }
 .card h5{
   color: #050505;

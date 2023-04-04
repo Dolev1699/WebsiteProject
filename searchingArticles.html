@@ -26,7 +26,9 @@
 
 <!--תפריט ניווט-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-  <a class="navbar-brand" href="index.html">ספריית HIT</a>
+  <a class="navbar-brand" href="index.html">
+    <img src="images/Logo 3.png" alt="לוגו">
+  </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -84,9 +86,10 @@
    <div class="container my-5 py-5 px-lg-5">
         <div class="row g-5 py-5">
           <div class="container">  
-            <div class="section-title position-relative text-center mb-5 pb-2">
-              <h1 >חיפוש מאמרים</h1>                
+            <div class="section-title position-relative text-start mb-5 pb-2">
+              <h2 >חיפוש מאמרים</h2>                
           </div>
+          <h5 class="p-3">בחרו יחידת לימוד שמעניינת אתכם... </h5> 
         </div>
      </div>
      </div>
@@ -95,15 +98,38 @@
    </div>
    </header>    
    <Main class="p-4">
-    <h4 class="p-3">בחרו נושא ללמידה</h4>
-    <div class="row row-cols-1 row-cols-md-5 g-4 justify-content-center align-items-center">
+   
+      <div class="row row-cols-1 row-cols-md-5 g-4 justify-content-center align-items-center">
       <div class="col">
         <div class="card">
           <div class="cardInnerPage">
-          <img src="/images/WhatsApp Image 2023-02-09 at 09.54.35.jpeg" class="card-img-top" alt="..." style="padding: 10px;">
+          <img src="/images/Group 92.png" class="card-img-top" alt="..." style="padding: 10px;">
           <div class="card-body d-flex flex-column" style="min-height: 110px;">
-            <h5 class="card-title">סרטון</h5>
-            <p class="card-text"> כיצד להגיע לפורטל הספרייה דרך עמדת המידע</p>
+            <h5 class="card-title">חיפוש מתקדם במאגרי מידע</h5>
+            <p class="cardInnerPage-text overflow-hidden" style="height: 50px;">
+              הסבר על הגדרות נפוצות של חיפוש מתקדם לביצוע סינון יעיל של תוצאות החיפוש במאגר המידע            </p>
+       </div>
+          <div class="p-3">
+            <span class="badge badge-pill badge-light w-auto">סרטון</span>
+            <span class="badge badge-pill badge-light w-auto"><i class="bi bi-clock"></i>
+              3 דקות</span> 
+        
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="cardInnerPage" id="tobooleanRise">
+          <img src="/images/Group 93.png" class="card-img-top" alt="..." style="padding: 10px;">
+          <div class="card-body d-flex flex-column" style="min-height: 110px;">
+            <h5 class="card-title">אופרטורים בוליאניים</h5>
+            <p class="card-text">הסבר על אופן השימוש באופרטורים AND, OR, NOT לייעול החיפוש</p>
+          </div>
+          <div class="p-3">
+            <span class="badge badge-pill badge-light w-auto">לומדה</span>
+            <span class="badge badge-pill badge-light w-auto"><i class="bi bi-clock"></i>
+              3 דקות</span> 
           </div>
         </div>
       </div>
@@ -111,45 +137,33 @@
       <div class="col">
         <div class="card">
           <div class="cardInnerPage">
-          <img src="/images/20230209_100947.jpg" class="card-img-top" alt="..." style="padding: 10px;">
+          <img src="/images/Group 94.png"class="card-img-top" alt="..." style="padding: 10px;">
           <div class="card-body d-flex flex-column" style="min-height: 110px;">
-            <h5 class="card-title">מסמך</h5>
-            <p class="card-text">היכרות עם קטלוג הספרייה</p>
+            <h5 class="card-title">אסטרטגיות חיפוש</h5>
+            <p class="card-text">אופן השימוש במילות מפתח והצגת כלים טכנולוגיים המסייעים בהרחבת החיפוש ומציאת מילים נרדפות</p>
           </div>
-        </div>
-      </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="cardInnerPage">
-          <img src="/images/20230209_100856.jpg" class="card-img-top" alt="..." style="padding: 10px;">
-          <div class="card-body d-flex flex-column" style="min-height: 110px;">
-            <h5 class="card-title">לומדה</h5>
-            <p class="card-text">אפשרויות החיפוש בקטלוג הספרייה</p>
+          <div class="p-3">
+            <span class="badge badge-pill badge-light w-auto">לומדה</span>
+            <span class="badge badge-pill badge-light w-auto"><i class="bi bi-clock"></i>
+              3 דקות</span> 
           </div>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card" id="toEnglishSearchRise">
           <div class="cardInnerPage">
-          <img src="/images/20230209_095418.jpg" class="card-img-top" alt="..." style="padding: 10px;">
+          <img src="/images/Group 95.png" class="card-img-top" alt="..." style="padding: 10px;">
           <div class="card-body d-flex flex-column" style="min-height: 110px;">
-            <h5 class="card-title">מה ניתן למצוא בספרייה</h5>
-            <p class="card-text">חיפוש ספרים, מאמרים, פרויקטי גמר</p>
+            <h5 class="card-title">חיפוש יעיל בשפה האנגלית</h5>
+            <p class="card-text">שימוש נכון ופרקטי בשפה האנגלית מסייע בייעול החיפוש וסינון עומס המידע המתקבל במאגרים המקוונים השונים </p>
+          </div>
+          <div class="p-3">
+            <span class="badge badge-pill badge-light w-auto">לומדה</span>
+            <span class="badge badge-pill badge-light w-auto"><i class="bi bi-clock"></i>
+              3 דקות</span> 
           </div>
           </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="cardInnerPage">
-          <img src="/images/20230209_095204.jpg" class="card-img-top" alt="..." style="padding: 10px;">
-          <div class="card-body d-flex flex-column" style="min-height: 110px;">
-            <h5 class="card-title">לאתר הספרייה</h5>
-            <p class="card-text">ספריית HIT </p>
-          </div>
-        </div>
         </div>
       </div>
     </div>
