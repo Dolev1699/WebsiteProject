@@ -17,13 +17,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
       window.location.href = "boolean/booleanRise.html";
       });
 
+
+      //פונקצצייה לתפריט ניווט דרגה 2
+
+      if (window.innerWidth < 992) {
+
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+      
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+      
+              }
+          });
+        })
+      }
+
 });
 
-
+ /*
 window.onscroll = function() {
     changeNavbarColor();
   };
 
+ 
   //שינוי צבע תפריט ניווט
   function changeNavbarColor() {
     var navbar = document.getElementById("navbar");
@@ -35,8 +69,9 @@ window.onscroll = function() {
       navbar.classList.remove("navbar-dark");
     }
   }
- 
+ */
 
+  /*
   // פונקציית חיפוש
   function searchFunc(event) {
     event.preventDefault();
@@ -60,6 +95,38 @@ window.onscroll = function() {
       showNoResultsMessage();
     }
   }
+*/
+  
+//חיפושששש
+function searchFunc(event) {
+  event.preventDefault();
+  const searchTerm = document.getElementById("search-box").value;
+  if (!searchTerm) {
+    return;
+  }
+
+  const dropdownItems = document.querySelectorAll(".dropdown-item");
+  const relevantLinks = [];
+
+  for (var i = 0; i < dropdownItems.length; i++) {
+    // Skip submenu items
+    if (dropdownItems[i].closest('.submenu')) {
+      continue;
+    }
+    if (dropdownItems[i].innerHTML.includes(searchTerm)) {
+      relevantLinks.push(dropdownItems[i].href);
+    }
+  }
+
+  if (relevantLinks.length > 0) {
+    showLinks(relevantLinks, event);
+  } else {
+    showNoResultsMessage();
+  }
+}
+
+
+
 
   // פונקציה הצגת תוצאות חיפוש לינקים
   function showLinks(links, event) {
