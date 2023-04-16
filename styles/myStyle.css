@@ -107,6 +107,22 @@ background-size: cover;
   font-size: 14px;
 }
 
+@media (max-width: 767px) {
+  /* להסתיר את הטקסט בפוטר במסך קטן */
+  .footerText,
+  .footerText a {
+    display: none;
+  }
+  
+  /* להציג רק רק מהטקסט של הפוטר */
+  .mobileFooter {
+    display: block;
+  }
+  .mobileFooter a{
+    display: block;
+  }
+}
+
 /*footer end*/
 
 
@@ -191,9 +207,7 @@ margin-inline-end: auto;
     z-index: 9999;
   }
 
- /* .navbar-brand {
-    font-weight: bold;
-  }*/
+
   
   .nav-link {
     font-size: 1.1rem;
@@ -307,7 +321,7 @@ margin-inline-end: auto;
 
   .card-body {
     flex-grow: 1;
-    overflow: hidden; /* hide overflowing text */
+    overflow: hidden; /* להסתיר טקסט שיוצא מהמסגרת */
     padding: 1rem;
   }
 
@@ -315,6 +329,6 @@ margin-inline-end: auto;
   .card-text {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* truncate overflowing text with ellipsis */
+    text-overflow: ellipsis; /* טקסט מיותר להסתיר */
   }
 }
