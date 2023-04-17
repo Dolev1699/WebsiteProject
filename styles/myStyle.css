@@ -152,11 +152,26 @@ a.my-link {
   color: black!important;
   text-decoration: none!important;
 margin-right: 20px;
+
+}
+
+/*-----------  מסך גדולmain רקע------------*/
+.background-image {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  top: 250px;
+  z-index: -1;
+max-width: 20%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom left;
+  background-repeat: no-repeat;
 }
 
 
 
-
+/*-----------main רקע------------*/
 /* כרטיסים עיצוב*/
 .card{
   border-color: gray;
@@ -345,5 +360,19 @@ margin-inline-end: auto;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; /* טקסט מיותר להסתיר */
+  }
+
+
+  .background-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 180px;
+    z-index: -1;
+  max-width: 50%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom left;
+    background-repeat: no-repeat;
   }
 }
