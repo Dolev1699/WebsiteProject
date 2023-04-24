@@ -6,7 +6,7 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+ 
 
 }
 
@@ -16,7 +16,9 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+}
 
 @media screen and (max-width: 768px) {
 
@@ -36,9 +38,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .headerinpage{
-    height: 58vh;
-  }
+
 
   .header{
     max-width: 100%;
@@ -173,6 +173,11 @@ max-width: 20%;
 
 /*-----------main רקע------------*/
 /* כרטיסים עיצוב*/
+.myCardsContainer{
+  margin-top: -150px;
+}
+
+
 .card{
   border-color: gray;
 --bs-card-border-width: 0px;
