@@ -378,6 +378,11 @@ text-decoration: none;
     text-overflow: ellipsis; /* טקסט מיותר להסתיר */
   }
 
+  .card-badge {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
   .background-image {
     position: absolute;
@@ -385,7 +390,7 @@ text-decoration: none;
     left: 0;
     top: 180px;
     z-index: -1;
-  max-width: 50%;
+    max-width: 50%;
     height: auto;
     object-fit: cover;
     object-position: bottom left;

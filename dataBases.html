@@ -87,14 +87,17 @@
         <a class="nav-link" href="sitemap.html">מפת אתר</a>
       </li>
    </ul>
-    <form class="form-inline mb-2 mb-md-0 d-flex">
-      <input class="form-control mr-2" type="search" placeholder="חיפוש נושא" aria-label="Search" id="search-box">
-      <button class="btn btn-outline-primary" type="submit" id="search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-      <div id="search-dropdown" class="dropdown-menu m-0 position-absolute" style="display:none;margin-top:2.5rem!important;">
+   <form class="form-inline mb-2 mb-md-0 d-flex">
+    <div class="input-group">
+      <input class="form-control mr-2" type="search" placeholder="הקלידו נושא לחיפוש..." aria-label="Search" id="search-box">
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary d-none" type="submit" id="search-btn">
+          <i class="fa fa-search"></i>
+        </button>
       </div>
-    </form>
+    </div>
+    <div id="search-dropdown" class="dropdown-menu m-0 position-absolute" style="display:none;margin-top:2.5rem!important;"></div>
+  </form>
   </div>
 </nav>
 
@@ -144,7 +147,7 @@
             <h5 class="card-title">מהו מאגר מידע?</h5>
             <p class="card-text">הסבר על מאגרי מידע, המאפיינים העיקריים של המאגרים ואופן הגישה אליהם</p>
           </div>
-          <div class="p-3">
+          <div class="p-3 d-none d-md-block">
             <span class="badge badge-pill badge-light w-auto">לומדה</span>
             <span class="badge badge-pill badge-light w-auto"> 
               3 דקות</span> 
@@ -158,7 +161,7 @@
             <h5 class="card-title">הבדלים בין מאגרי מידע</h5>
             <p class="card-text">הסבר על ההבדלים הבולטים בין המאגרים השונים כולל יתרונות וחסרונות של כל מאגר מידע</p>
           </div>
-          <div class="p-3">
+          <div class="p-3 d-none d-md-block">
             <span class="badge badge-pill badge-light w-auto">לומדה</span>
             <span class="badge badge-pill badge-light w-auto"> 3 דקות</span> 
           </div>
