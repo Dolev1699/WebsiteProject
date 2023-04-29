@@ -281,9 +281,20 @@ margin-inline-end: auto;
   }
   /*תמונה בתוך כרטיס בעמוד פנימי מסך גדול*/
  
+/*------------עמוד מפת אתר--------------*/
+ul.list-unstyled li {
+  margin-bottom: 10px;
+}
 
+ul.list-unstyled li a {
+  color: black;
 
+}
 
+h5 a{
+  color: black;
+text-decoration: none;
+}
 
 
  
@@ -380,4 +391,8 @@ margin-inline-end: auto;
     object-position: bottom left;
     background-repeat: no-repeat;
   }
+
+
+
+
 }
