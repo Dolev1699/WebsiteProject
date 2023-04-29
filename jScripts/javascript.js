@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   const card = document.getElementById("toEnglishSearchRise");
   card.addEventListener("click", function() {
-    window.location.href = "englishSearch/englishSearchRise.html";
+    window.location.href = "testpage.html";
     });
 
     const card2 = document.getElementById("tobooleanRise");
