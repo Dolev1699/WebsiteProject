@@ -101,7 +101,7 @@ background-size: cover;
 
 .footer a.text-black {
   font-size: 18px;
-  margin-right: 1rem;
+  margin-right: 1rem; 
 }
 .footer ul li {
   font-size: 14px;
@@ -177,6 +177,10 @@ max-width: 20%;
   margin-top: -150px;
 }
 
+.the-index-page-cards-container{
+  margin-top: -50px;
+}
+
 
 .card{
   border-color: gray;
@@ -228,6 +232,11 @@ min-height: 450px;
 background-color: #e1daf4;
 width: 30%;
 margin-inline-end: auto;
+}
+
+.tags-card{
+
+  position: relative;
 }
 
 
@@ -284,6 +293,7 @@ margin-inline-end: auto;
 /*------------עמוד מפת אתר--------------*/
 ul.list-unstyled li {
   margin-bottom: 10px;
+  margin-right: 50px;
 }
 
 ul.list-unstyled li a {
@@ -296,6 +306,9 @@ h5 a{
 text-decoration: none;
 }
 
+.contact-descreption{
+margin-right: 18px;
+}
 
  
   /*
