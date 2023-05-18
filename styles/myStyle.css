@@ -298,6 +298,7 @@ ul.list-unstyled li {
 
 ul.list-unstyled li a {
   color: black;
+  text-decoration: none;
 
 }
 
@@ -310,7 +311,13 @@ text-decoration: none;
 margin-right: 18px;
 }
 
- 
+.smaller-font {
+  font-size: 16px; /* Adjust the value to your desired font size */
+}
+
+.sitemap{
+  margin-right: -30px;
+}
   /*
 .search-dropdown{
   display: block;
