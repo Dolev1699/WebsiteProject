@@ -60,7 +60,7 @@
 /*ראש עמוד*/
 .header{
 font-family: 'Rubik', sans-serif;
-background-image: url('../images/headerBack.png');
+background-image: url('../images/Group 245.svg');
 background-repeat: no-repeat;
 background-size: cover;
 height: auto;
@@ -174,11 +174,11 @@ max-width: 20%;
 /*-----------main רקע------------*/
 /* כרטיסים עיצוב*/
 .myCardsContainer{
-  margin-top: -150px;
+  margin-top: -7%;
 }
 
 .the-index-page-cards-container{
-  margin-top: -50px;
+  margin-top: -5%;
 }
 
 

@@ -1,0 +1,15 @@
+<svg width="1920" height="645" viewBox="0 0 1920 645" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-14 444.876V345.717C-14 273.241 385.078 249.784 584.618 247.114C640.218 204.67 1505.37 393.6 1931 493.37L1998.5 644.5C1964.82 586.84 1080.59 412.453 676.44 345.717C459.263 309.855 174.387 395.341 -0.831685 454.379C-7.32298 456.566 -14 451.726 -14 444.876Z" fill="#EBF4FF"/>
+<path d="M637.487 334.759L1922 495V0H2V380.5C247.57 301.063 501.699 315.776 637.487 334.759Z" fill="url(#paint0_diamond_569_7)"/>
+<ellipse cx="1855" cy="169" rx="95" ry="101" fill="#E3C7FF" fill-opacity="0.16"/>
+<ellipse cx="33.5" cy="105.5" rx="47.5" ry="50.5" fill="#E4B9C4"/>
+<ellipse cx="111" cy="78.5" rx="58" ry="61.5" fill="#F2CCD2" fill-opacity="0.32"/>
+<ellipse cx="1894.5" cy="67.5" rx="47.5" ry="50.5" fill="#BAACEC" fill-opacity="0.6"/>
+<defs>
+<radialGradient id="paint0_diamond_569_7" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-40.8439 -48.992) rotate(13.4385) scale(2119 4569.8)">
+<stop stop-color="#F3B2AB"/>
+<stop offset="0.0001" stop-color="#EBB3B0"/>
+<stop offset="1" stop-color="#AAA4F6"/>
+</radialGradient>
+</defs>
+</svg>
