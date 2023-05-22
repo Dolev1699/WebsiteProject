@@ -7,16 +7,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     searchBtn.addEventListener("click", searchFunc);
   }
 
+  //כרטיסיות קישורים
+
   const card = document.getElementById("toEnglishSearchRise");
-  card.addEventListener("click", function() {
-    window.location.href = "testpage.html";
-    });
+  card.addEventListener("click", function() { window.location.href = "englishRisePage.html";});
 
-    const card2 = document.getElementById("tobooleanRise");
-    card2.addEventListener("click", function() {
-      window.location.href = "booleanpage.html";
-      });
+  const card2 = document.getElementById("tobooleanRise");
+    card2.addEventListener("click", function() { window.location.href = "booleanpage.html";});
 
+    const card3 = document.getElementById("todataBasesByPage");
+    card3.addEventListener("click", function() { window.location.href = "dataBasesByPage.html";});
+
+
+   
 
       //פונקצצייה לתפריט ניווט דרגה 2
 
