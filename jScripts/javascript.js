@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const card2 = document.getElementById("tobooleanRise");
     card2.addEventListener("click", function() { window.location.href = "booleanpage.html";});
 
-    const card3 = document.getElementById("todataBasesByPage");
-    card3.addEventListener("click", function() { window.location.href = "dataBasesByPage.html";});
+    const card3 = document.getElementById("toAdvancedSearchPage");
+    card3.addEventListener("click", function() { window.location.href = "advancedSearchVideoPage.html";});
 
 
    
