@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>אתר הדרכות דיגטליות ספריית HIT</title>
+    <meta name="description" content="הדרכות דיגטליות" />
+    <meta name="keywords" content="טכנולוגיות למידה, הדרכות " />
+    <meta name="author" content="קורל ששון ודולב קליינר " />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--לוגו עמוד-->
+ <link rel="icon" type="image/png" href="images/Logo 3.png">
+
+    <!-- CSS -->
+    <link href="styles/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- JS -->
+    <script src="jScripts/bootstrap.bundle.min.js"></script>
+    <script src="jScripts/javascript.js"></script>
+
+</head>
+<body lang="he" dir="rtl" class="position-relative">
+
+
+<!--תפריט ניווט-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+  <a class="navbar-brand" href="index.html">
+    <img src="images/Logo 3.png" alt="לוגו">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse mt-3 mt-md-0" id="navbarTogglerDemo01">
+    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">אודות</a>
+      </li>
+      <li class="nav-item dropdown" id="myDropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">תכנים</a>
+        <ul class="dropdown-menu">
+          <li> <a href="startpage.html" class="dropdown-item">איך מתחילים&raquo; </a>
+            <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="#">פורטל הספרייה</a></li>
+              <li><a class="dropdown-item" href="#">קטלוג הספרייה</a></li>
+            </ul>
+          </li>
+          <li>  <a href="resourcesTypes.html" class="dropdown-item">סוגי מקורות מידע&raquo; </a>
+            <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="#">מבנה המאמר האקדמי</a></li>
+              <li><a class="dropdown-item" href="#">סוגי מקורות מידע</a></li>
+              <li><a class="dropdown-item" href="#">הערכת מידע באינטרנט</a> </li>
+            </ul>
+          </li>
+          <li>   <a href="dataBases.html" class="dropdown-item">מאגרי מידע&raquo; </a>
+            <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="#">מהו מאגר מידע</a></li>
+              <li><a class="dropdown-item" href="#">הבדלים בין מאגרי מידע</a></li>
+            </ul>
+          </li>
+          <li>   <a href="searchingArticles.html" class="dropdown-item">חיפוש מאמרים&raquo; </a>
+            <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="#">חיפוש מתקדם</a></li>
+              <li><a class="dropdown-item" href="#">לוגיקה בוליאנית</a></li>
+              <li><a class="dropdown-item" href="englishRisePage.html">חיפוש יעיל באנגלית</a> </li>
+            </ul>
+          </li>
+          <li> <a href="bibList.html" class="dropdown-item">רשימה ביבליוגרפית&raquo; </a>
+            <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="#">כללי ציטוט</a></li>
+              <li><a class="dropdown-item" href="#">כלים טכנולוגיים לציטוט</a></li>
+            </ul>
+          </li>
+       </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="faqPage.html">שאלות נפוצות</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sitemap.html">מפת אתר</a>
+      </li>
+   </ul>
+   <form class="form-inline mb-2 mb-md-0 d-flex">
+    <div class="input-group">
+      <input class="form-control mr-2" type="search" placeholder="הקלידו נושא לחיפוש..." aria-label="Search" id="search-box">
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary d-none" type="submit" id="search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div id="search-dropdown" class="dropdown-menu m-0 position-absolute" style="display:none;margin-top:2.5rem!important;"></div>
+  </form>
+  </div>
+</nav>
+
+
+<!--תפריט ניווט סוף-->
+<header>
+  <div class="header">
+    <div class="container-xxl pb-lg-5 hero-header">
+      <!--פירורי לחם-->
+      <div class="pt-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-start">
+          <li class="breadcrumb-item active"><a href="index.html" class="my-link">דף הבית</a></li>
+          <li class="breadcrumb-item" aria-current="page"><a href="bibList.html" class="my-link">רשימה ביבליוגרפית</a> </li>
+          <li class="breadcrumb-item" aria-current="page">כללי ציטוט</li>
+
+         </ol>
+         </nav> 
+        </div>
+          <!--סוף פירורי לחם-->
+     <div class="container my-lg-5 py-5">
+          <div class="row g-5 py-lg-5">
+            <div class="container">  
+              <div class="section-title position-relative text-start mb-5 pb-2">
+                <h2>כללי ציטוט</h2>                
+            </div>
+          </div>
+       </div>
+       </div>
+      </div>  
+     </div>
+     </header>  
+<main>
+  <div class="container container-fluid">
+    <p>לקוח מתוך אתר ספריית HIT &copy;כל הזכויות שמורות לספריית המכון הטכנולוגי HIT</p>
+    <div>
+      <hr /></div>    
+    <div>תוכנות אוטומטיות ליצירית רישום ביבליוגראפי</div>
+    
+    <div><a href="http://www.citationmachine.net/#"><strong>Citation Machine</strong></a><a href="http://www.citationmachine.net/#">&nbsp;&nbsp;</a><br />
+    <a href="https://www.citethisforme.com/" target="new"><strong>Cite This For Me</strong></a></div>
+    
+    <div>&nbsp;</div>
+    
+    <div><a href="http://www.mendeley.com" target="_blank"><span class="subtitle">Mendeley</span></a> (מנדליי) תוכנה חינמית לניהול, ארגון וציטוט אזכורים ומקורות.</div>
+    
+    <div>התוכנה מאפשרת:</div>
+    
+    <div>&nbsp;- שמירת מאמרים בפורמט PDF או DOC ומיונם לפי מאפיינים שונים</div>
+    
+    <div>&nbsp;- ייבוא מידע ביבליוגראפי ממאגרי מידע ומקורות אחרים</div>
+    
+    <div>&nbsp;- יצירת רשימה ביבליוגראפית בסגנון ניתן לבחירה בקליק אחד</div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <hr /></div>
+    
+    <div>&nbsp;</div>
+    
+    <div class="text-black">כל עבודה מדעית מסתמכת על מקורות מידע שונים: ספרים, מאמרים (מתוך כתבי-עת או ספרים ), אתרי אינטרנט ועוד.</div>
+    
+    <p>נתוני המקורות (שם המחבר ו/או עורך, כותר (שם הספר או מאמר), מקום ההוצאה לאור, שם ההוצאה לאור, תאריך פרסום - מהווים רישום ביבליוגרפי. רישומים ביבליוגרפיים יש לחבר ברשימה ביבליוגרפית של מקורות מידע, הממוקמת בסוף העבודה.</p>
+    
+    <p>רישום ביבליוגרפי חייב להיות בשפת הכתיבה של המקור.</p>
+    
+    <p>רישומים ברשימה ביבליוגרפית מסודרים לפי סדר א&quot;ב של שמות משפחה של המחברים, מלבד רישומים בשיטת IEEE, שלפיה הרישומים מסודרים לפי סדר אזכורם בטקסט, עם מספור רץ בסוגריים מרובעים.</p>
+    
+    <p>אם העבודה נכתבת בעברית הרישומים הראשונים יהיו רישומים ביבליוגרפיים של המקורות שנכתבו בעברית ואחריהם כל הרישומים בשפות אחרות.</p>
+    
+    <p>ישנן שיטות רבות לרישום פריטים ביבליוגרפיים, להלן כמה מהן:</p>
+    
+    <p>American Psychological Association) <strong>APA)</strong> - פסיכולוגיה ומדעי החברה</p>
+    
+    <p>Modern Language Association) <strong>MLA)</strong> - אנגלית ומדעי הרוח</p>
+    
+    <p>Institute of Electrical and Electronics Engineers) <strong>IEEE</strong>) - הנדסה</p>
+    
+    <div>כל שיטה תוכל להיות טובה, בתנאי שתישמר בעקביות לאורך כל העבודה.</div>
+    
+    <div>
+    <hr /></div>
+    
+    <div>&nbsp;</div>
+    
+    <div><span class="title">דוגמאות של רישומים ביבליוגראפיים</span><br />
+    <br />
+    <span class="subtitle">ספר</span></div>
+    
+    <div><span class="subtitle">&nbsp;</span>פרטי הרישום של הספר צריכים להילקח מעמוד השער של הספר ולא מהכריכה/העטיפה .</div>
+    
+    <div><strong>מרכיבי רישום:</strong></div>
+    
+    <div>מחבר/עורך, כותר (שם הספר), מקום הוצאה לאור, הוצאה לאור, שנת פרסום.</div>
+    
+    <div>&nbsp;</div>
+    
+    <ul>
+      <li>
+      <div><strong><span style="font-size: 10pt;">מחבר אחד:</span></strong></div>
+      </li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    
+    <div class="table-responsive">
+      <table class="table" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">APA</span></div>
+            </td>
+            <td style="background-position: 0% 0%; height: 30px; text-align: right; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div>גורן, ד' (1993). תקשורת ומציאות. ירושלים: כתר.</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div dir="ltr">Tan, Amy. (2001). <i>The Bonesetter's Daughter.</i> New York: Putnam.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <p>&nbsp;</p>
+    
+    <p>&nbsp;</p>
+    
+    <div class="table-responsive">
+      <table class="table" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">MLA</span></div>
+            </td>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">גורן, דינה. תקשורת ומציאות. ירושלים: כתר,1993</td>
+          </tr>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">Tan, Amy. The Bonesetter's Daughter. New York: Putnam, 2001.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <p>&nbsp;</p>
+    
+    <p>&nbsp;</p>
+    
+    <div class="table-responsive">
+      <table class="table" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; white-space: nowrap; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">IEEE</span></div>
+            </td>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; vertical-align: middle; white-space: nowrap; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div dir="ltr">A. Tan, <i>The Bonesetter's Daughter,</i> New York: Putnam, 2001.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <div>&nbsp;</div>
+    
+    <ul>
+      <li>
+      <div><strong>שני מחברים: </strong></div>
+      </li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    
+    <div class="table-responsive">
+      <table class="table" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">APA</span></div>
+            </td>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; text-align: right; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div>שהם, ג' ורהב, ג' (1983).אות קין. ירושלים: שוקן.</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div dir="ltr">Sloan, F. A., &amp; Bentkover, J. B. (1979). Access to ambulatory care and the U.S. economy<em>.</em> Lexington, Mass. : Lexington Books.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <div>&nbsp;</div>
+    
+    <div>
+      <div class="table-responsive">
+        <table class="table" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+          <tbody>
+            <tr>
+              <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+                <div><span class="title">MLA</span></div>
+              </td>
+              <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+                <div>שהם, גיורא, וגיורא רהב. אות קין. ירושלים: שוקן, 1984</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+                <div>Sloan, Frank A., and Judith D. Bentkover. Access to ambulatory care and the U.S. economy. Lexington, Mass. : Lexington Books, 1979.</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    
+    <div>
+    <div>&nbsp;</div>
+    
+    <div class="table-responsive">
+      <table class="table" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">IEEE</span></div>
+            </td>
+            <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div>F. A. Sloan and J. D. Bentkover, Access to ambulatory care and the U.S. economy, Lexington, Mass. : Lexington Books, 1979.</div>
+            </td>
+          </tr>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    </div>
+    
+    <p>&nbsp;</p>
+    
+    <ul>
+      <li>
+      <div><strong>שלושה מחברים ויותר:</strong></div>
+      </li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    
+    <div class="table-responsive">
+      <table class="table" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">APA</span></div>
+            </td>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div>פרידמן, י', הורוביץ, ת' ושליב, ר' (1988). אפקטיביות, תרבות ואקלים של בתי-ספר. ירושלים: מכון הנרייטה סאלד - המכון הארצי למחקר במדעי ההתנהגות</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div dir="ltr">Sloan, F. A., Stout, E. M., &amp; Whetten-Goldstein, K. (2000). Drinkers, drivers, and bartenders: balancing private choice and public accountability. Chicago: University of Chicago Press.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <p>&nbsp;</p>
+    
+    <div>
+    <table cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td rowspan="2" style="background-position: 0% 0%; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">MLA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div>פרידמן, יצחק, הורוביץ, תמר, ושליב, ראובן. אפקטיביות, תרבות ואקלים של בתי-ספר. ירושלים: מכון הנרייטה סאלד - המכון הארצי למחקר במדעי ההתנהגות, 1988.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div  dir="ltr">Sloan, Frank A., Stout Emily M., and Whetter-Goldstein, Kathrine. Drinkers, drivers, andbartenders : balancing private choice and public accountability. Chicago : University of Chicago Press, 2000.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+      <div class="table-responsive">
+        <table class="table" style="border: currentColor; border-image: none; width: 100%; border-collapse: collapse;">
+          <tbody>
+            <tr>
+              <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+                <div><span class="title">IEEE</span></div>
+              </td>
+              <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+                <div>F. A. Sloan and J. D. Bentkover, Access to ambulatory care and the U.S. economy, Lexington, Mass. : Lexington Books, 1979.</div>
+              </td>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <ul>
+      <li>
+      <div><strong>עורך כמחבר:</strong></div>
+      </li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    
+<div class="table-responsive">
+  <table class="table" style="border: currentColor; border-image: none; width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">APA</span></div>
+        </td>
+        <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div>צדקיהו, ש' (עורך). (1988). אקלים הכיתה: מהות ומעזה. ירושלים: משרד החינוך ותרבות.</div>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div>Powell, K., and Meyer, R. (Eds.). (2000). Step into a World: A Global Anthology of the new Black Literature. New York: Wiley</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    
+    <div>&nbsp;</div>
+    
+    <div>
+      <div class="table-responsive">
+        <table class="table" style="border: currentColor; border-image: none; width: 100%; border-collapse: collapse;">
+          <tbody>
+            <tr>
+              <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+                <div><span class="title">APA</span></div>
+              </td>
+              <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+                <div>צדקיהו, ש' (עורך). (1988). אקלים הכיתה: מהות ומעזה. ירושלים: משרד החינוך ותרבות.</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+                <div>Powell, K., and Meyer, R. (Eds.). (2000). Step into a World: A Global Anthology of the new Black Literature. New York: Wiley</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+      <div class="table-responsive">
+        <table class="table" style="border: currentColor; border-image: none; width: 100%; border-collapse: collapse;">
+          <tbody>
+            <tr>
+              <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+                <div><span class="title">IEEE</span></div>
+              </td>
+              <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+                <div>K. Powell and R. Meyer, Eds., Step into a World: A Global Anthology of the new Black Literature, New York: Wiley, 2000</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    
+    <p>&nbsp;</p>
+    
+    <div>&nbsp;</div>
+    
+    <div><span class="subtitle">מאמר</span></div>
+    
+    <div><span class="subtitle">&nbsp;</span></div>
+    
+    <div><strong>מרכיבי רישום: </strong></div>
+    
+    <div>מחבר, כותר המאמר, שם כתב העת, מספר כרך וגליון, תאריך פרסום, מספר עמודים במאמר.</div>
+    
+    <ul>
+      <li>
+      <div>מאמר מתוך תקופון (כתב עת):</div>
+      </li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    
+    <div class="table-responsive">
+      <table class="table" style="border: currentColor; border-image: none; width: 100%; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">APA</span></div>
+            </td>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div>טורנהיים, י' (1994). "דיוניסוס בבית שאן", קתדרה, 71, 21-34.</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);" colspan="2">
+              <div>Ryan, Katy. (2000). Revolutionary Suicide in Toni Morrison's Fiction. African American Review, 34, 389-412.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div class="table-responsive">
+      <table class="table" style="border: currentColor; border-image: none; width: 100%; border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+              <div><span class="title">MLA</span></div>
+            </td>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; height: 30px; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+              <div>לוטרינגר, אורית. "אבי שורץ: אין כמו יפו..." מכירה פומבית 52 (2006): 18-24</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);" colspan="2">
+              <div dir="ltr">Leavit, Caroline. "Learning Mother Love."<br />Psychology Today 8 (2006): 44-47.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">IEEE</span></div>
+          </td>
+          <td style="background-position: 0% 0%; width: 400px; height: 100px; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div>C. Leavit, &quot;Learning Mother Love,&quot; Psychology Today, 8,</div>
+    
+          <div>&nbsp;pp. 44-47, 2003.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <ul>
+      <li>
+      <div><strong>מאמר מתוך ספר:</strong></div>
+      </li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">APA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div>לאור, י&#39; (1988). &quot;אקלים כיתה.&quot; בתוך: ש&#39; צדקיהו (עורך), אקלים כיתה: מהות ומעשה&nbsp;&nbsp; (עמ&#39; 19-41). ירושלים: משרד החינוך והתרבות .</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div>Odell, Noell. (2000) &quot;Mallory and Irvine&#39;s Attempt.&quot; Points Unknown: A Century of Great Exploration. Ed. David Roberts. New York: Norton, 2000 : 72-161.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">MLA</span></div>
+          </td>
+          <td rowspan="2" style="background-position: 0% 0%; border: currentColor; border-image: none; width: 400px; height: 100px; text-align: right; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div>אלבוים-דרור, רחל. &quot;שלוש אסכולות בתורת המינהל ומינהל החינוך.&quot; מדיניות ומינהל.</div>
+    
+          <div>עורכת רחל אלבוים-דרור. ירושלים: מאגנס, 1987. 61-63</div>
+          </td>
+        </tr>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">IEEE</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">C. Heller, &quot;Gender Roles in Ethiopian Culture,&quot; in Gender in Cross-Cultural Perspective, A. Gotliebe and G. Franco, Eds., Boston: Faber, 2001, pp. 46-73.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div><span class="subtitle">&nbsp;</span></div>
+    
+    <div><span class="subtitle">משאבים מקוונים</span></div>
+    
+    <div><span class="subtitle">&nbsp;</span></div>
+    
+    <ul>
+      <li><strong>אתר אישי (פרטי): </strong></li>
+    </ul>
+    
+    <div><strong>מרכיבי רישום:</strong><br />
+    מחבר, שם האתר, תאריך עידכון אחרון, תאריך גישה, כתובת URL.</div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; height: 100px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">APA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">Lorenzen, M. (2003, December 1). Using Outcome-Based Education in the Planning and Teaching of New Information Technologies Retrievied December 25, 2005, from <a href="http://www.libraryinstruction.com/obe.html" target="_blank" title="http://www.libraryinstruction.com/obe.html">http://www.libraryinstruction.com/obe.html</a></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; height: 100px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">MLA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">Lorenzen, Michael. &quot; Using Outcome-Based Education in the Planning and Teaching of New Information Technologies.&quot; Retrievied December 25, 2005, from LibraryInstruction.Com.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; height: 84px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">IEEE</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div  dir="ltr">M. Lorenzen, &quot;Using Outcome-Based Education in the Planning and Teaching of New Information Technologies,&quot; December 1998;</div>
+    
+          <div  dir="ltr"><a href="http://englisheku.edu/pellegrino/personal.htm" title="http://englisheku.edu/pellegrino/personal.htm">http://englisheku.edu/pellegrino/personal.htm</a></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>&nbsp;</div>
+    
+    <ul>
+      <li><strong>אתר מקצועי של גוף או ארגון: </strong></li>
+    </ul>
+    
+    <div><strong>מרכיבי רישום: </strong></div>
+    
+    <div>שם האתר, הקבוצה האחראית על האתר, תאריך עידכון אחרון, תאריך גישה, כתובת URL.</div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">APA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">Palo Pacific Technology Pty Ltd. (12 Juny 2006). palowireless Wireless Resource Center. Retrieved Juny 15, 2006, from <a href="http://www.palowireless.com/" title="http://www.palowireless.com/">http://www.palowireless.com/</a></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div dir="ltr">&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">MLA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">palowireless Wireless Resource Center . 12 Jun. 2005. Palo Pacific Technology Pty Ltd. 1 Aug. 2005 .</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; height: 68px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">IEEE</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">Palo Pacific Technology Pty Ltd, palowireless Wireless Resource Center, 12 Jun. 200 <a href="http://serachenginewatch.com/facts/article.php/215591" title="http://serachenginewatch.com/facts/article.php/215591">http://serachenginewatch.com/facts/article.php/215591</a></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>&nbsp;</div>
+    
+    <ul>
+      <li><strong>ספרים מקוונים (e-books) </strong></li>
+    </ul>
+    
+    <div><strong>מרכיבי רישום:</strong></div>
+    
+    <div>מחבר/עורך, כותר, הוצאה לאור, מקום פירסום, תאריך פירסום, כתובת URL, תאריך גישה.</div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">APA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div  dir="ltr" style="margin-right: 0px;">Mason O. T. (1901) A Primitive Frame for Weaving Narroe Fabrics. Washington: Government Printing Office. Retreived August 1, 2006, from the Online Books Page website:</div>
+    
+          <div  dir="ltr" style="margin-right: 0px;">https://repository.si.edu/handle/10088/29821</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">MLA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">Mason, Otis Tufton. A Primitive Frame for Weaving Narrow Fabrics.<br />
+          Washington: Government Printing Office, 1901. 1 Aug. 2006 .<br />
+          <a href="http://www.cs.arizona.edu/patterns/weaving/monographs/loom.pdf" title="http://www.cs.arizona.edu/patterns/weaving/monographs/loom.pdf">http://www.cs.arizona.edu/patterns/weaving/monographs/loom.pdf</a></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">IEEE</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">O. T.Mason. (1901). &quot;A Primitive Frame for Weaving Narrow Fabrics.&quot; [Online]. Available:<br />
+          <a href="http://www.cs.arizona.edu/patterns/weaving/monographs/loom.pdf" title="http://www.cs.arizona.edu/patterns/weaving/monographs/loom.pdf">http://www.cs.arizona.edu/patterns/weaving/monographs/loom.pdf</a>.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <ul>
+      <li><strong>מאמר מתוך כתב עת אלקטרוני (e-journal): </strong></li>
+    </ul>
+    
+    <div><strong>מרכיבי רישום: </strong></div>
+    
+    <div>מחבר, כותר, שם של כתב עת, מספר גיליון וכרך, תאריך פירסום, כתובת URL, תאריך גישה.</div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">APA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; vertical-align: top; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">Paranandi, M. (2006).Miami Metals [Electronic version]. Architecture Week, 296, T.1.1-2.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">MLA</span></div>
+          </td>
+          <td style="background-position: 0% 0%; border: currentColor; border-image: none; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">Paranandi, Murali. &quot;Miami Metals.&quot; Architecture Week. 296 (2006). 1 August 2006 <a href="http://www.architectureweek.com/2006/0726/tools_1-1.html" title="http://www.architectureweek.com/2006/0726/tools_1-1.html">http://www.architectureweek.com/2006/0726/tools_1-1.html</a>.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+    <table cellpadding="6" cellspacing="6" style="border: currentColor; border-image: none; width: 500px; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background-position: 0% 0%; width: 100px; height: 100px; text-align: center; vertical-align: middle; background-image: none; background-repeat: repeat; background-color: rgb(222, 237, 234);">
+          <div><span class="title">IEEE</span></div>
+          </td>
+          <td style="background-position: 0% 0%; text-align: left; background-image: none; background-repeat: repeat; background-color: rgb(240, 248, 246);">
+          <div dir="ltr">M.Paranandi. (2006, Aug) Miami Metals. Architectur Week [Online].296, pp. 1.1-1.2. Available: <a href="http://www.architectureweek.com/2006/0726/tools_1-1.html" title="http://www.architectureweek.com/2006/0726/tools_1-1.html">http://www.architectureweek.com/2006/0726/tools_1-1.html</a>.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>&nbsp;</div>
+    
+  </div>
+</main>
+
+
+
+<footer class="footer rtl-footer-bg py-3 d-flex">
+  <div class="container">
+    <div class="footerText d-flex flex-column flex-md-row justify-content-md-between">
+      <a class="text-black text-center" href="about.html">אודות</a>
+      <div class="col-md-1 text-center"  style="width:max-content">
+        <a class="text-black">תכנים</a>
+        <div class="text-lg-start">
+        <ul class="list-unstyled mt-2">
+          <li><a href="startpage.html">איך מתחילים?</a></li>
+          <li><a href="resourcesTypes.html">סוגי מקורות אקדמיים</a></li>
+          <li><a href="dataBases.html">מאגרי מידע</a></li>
+          <li><a href="searchingArticles.html">חיפוש מאמרים</a></li>
+          <li><a href="bibList.html">רשימה ביבליוגרפית</a></li>
+        </ul>
+      </div>
+      </div>
+      <a class="text-black text-center"  href="faqPage.html">שאלות נפוצות</a>
+      <a class="text-black text-center" href="sitemap.html">מפת אתר</a>
+      <div>
+        <a class="text-black">צור קשר</a>
+        <p class="text-center contact-descreption mt-2">ניתן לפנות לצוות הספרייה במייל: <br>Library@hit.ac.il</p>
+      </div>
+      <div class="mobileFooter text-center" style="font-style: italic; line-height: 1.8em;">
+        <p>האתר פותח במסגרת פרויקט גמר במכון הטכנולוגי בחולון<br>
+          הפקולטה לטכנולוגיות למידה, תואר ראשון</p>
+        <a href="https://www.hit.ac.il/"><img src="images/HITlogo.png" alt="HIT Logo"></a>
+        <p>&copy; כל הזכויות שמורות למכון הטכנולוגי HIT</p>
+
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>
