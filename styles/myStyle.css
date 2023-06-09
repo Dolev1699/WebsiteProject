@@ -68,7 +68,6 @@ height: auto;
 /*background-position: center;*/
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover;
 }
 
 .header img{
@@ -175,12 +174,12 @@ max-width: 20%;
 /*-----------main רקע------------*/
 /* כרטיסים עיצוב*/
 .myCardsContainer{
-  margin-top: -7%;
+  margin-top: -2%;
 }
 
 .the-index-page-cards-container{
-  margin-top: -5%;
-  max-width: 1200px; /* Adjust the value as per your requirements */
+  margin-top: -2%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
