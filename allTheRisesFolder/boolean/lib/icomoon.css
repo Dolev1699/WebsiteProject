@@ -453,4 +453,11 @@
 .icon-alert:before {
 	content: "\e96a";
 }
+/*עיצוב לחלק של "מה נלמד ביחידה זו"*/
+
+.block-list__content p:last-child{
+    margin-right: 10%;
+}
+
+/*עיצוב לפאזל*/
 .quiz-match {direction: ltr; }

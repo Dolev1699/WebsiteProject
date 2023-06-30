@@ -466,3 +466,8 @@
     direction: rtl!important;
 
 }
+
+.block-list__content p:last-child{
+    margin-right: 10%;
+}
+

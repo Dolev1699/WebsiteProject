@@ -453,3 +453,23 @@
 .icon-alert:before {
 	content: "\e96a";
 }
+
+
+/*----------עיצוב לרייז לרשימה נפתחת----*/
+.blocks-accordion__container{
+    direction: ltr!important;
+  }
+
+.blocks-accordion__title {
+    text-align: right!important;
+}
+
+.blocks-accordion p{
+    direction: rtl!important;
+
+}
+
+.block-list__content p:last-child{
+	margin-right: 10%;
+}
+
