@@ -37,6 +37,7 @@
 
 }
 
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
@@ -45,8 +46,8 @@
     max-width: 100%;
   }
 
-
 }
+
 
 @media (max-width: 1920px) {
   header {
@@ -55,7 +56,6 @@
     max-width: 100%;
   }
   }
-
 
 
 /*ראש עמוד*/
@@ -354,11 +354,31 @@ margin-right: 18px;
 }	
 /* ============ מסך קטן/ ============ */
 
-/*-------------כרטיס הגדרות מסך מובייל*/
 
+/*-------------  נעילת הרספונסיביות עד למינימום גודל מסויים - הגדרות מסך מובייל*/
+@media (max-width: 300px) {
+ 
+  html, body, .container, .the-index-page-cards-container, .card {
+    min-width: 300px !important;
+  }
+
+}
   /* עיצוב כרטיסיות בעמוד פנימי מסך קטן*/
-  /* */
+
 @media (max-width: 767px) {
+ /* הסתרת הטקסט בכרטיסיות היבת והצגת התגיות בלבד*/
+ .the-index-page-cards-container .card-wrapper .card .card-body .card-text {
+  display: none;
+}
+
+.the-index-page-cards-container .col-sm-4 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.card {
+  min-width: 280px;
+}
   .card-wrapper {
     display: flex;
     flex-wrap: wrap;
