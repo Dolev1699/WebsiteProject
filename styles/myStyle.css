@@ -366,7 +366,7 @@ margin-right: 18px;
   /* עיצוב כרטיסיות בעמוד פנימי מסך קטן*/
 
 @media (max-width: 767px) {
- /* הסתרת הטקסט בכרטיסיות היבת והצגת התגיות בלבד*/
+ /* הסתרת הטקסט בכרטיסיות והצגת התגיות בלבד*/
  .the-index-page-cards-container .card-wrapper .card .card-body .card-text {
   display: none;
 }
