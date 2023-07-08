@@ -56,52 +56,124 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 });
 
- /*
-window.onscroll = function() {
-    changeNavbarColor();
-  };
+//פונקצית
+function searchFunc(event) {
+  event.preventDefault();
+  const searchTerm = document.getElementById("search-box").value;
+  if (!searchTerm) {
+    return;
+  }
 
- 
-  //שינוי צבע תפריט ניווט
-  function changeNavbarColor() {
-    var navbar = document.getElementById("navbar");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      navbar.classList.add("navbar-dark");
-      navbar.classList.remove("bg-light");
-    } else {
-      navbar.classList.add("bg-light");
-      navbar.classList.remove("navbar-dark");
+  const dropdownItems = document.querySelectorAll(".dropdown-item");
+  const relevantLinks = [];
+
+  for (var i = 0; i < dropdownItems.length; i++) {
+    // Skip submenu items
+    if (dropdownItems[i].closest('.submenu')) {
+      continue;
+    }
+    if (dropdownItems[i].innerHTML.includes(searchTerm)) {
+      relevantLinks.push(dropdownItems[i].href);
     }
   }
- */
 
-  /*
-  // פונקציית חיפוש
-  function searchFunc(event) {
-    event.preventDefault();
-    const searchTerm = document.getElementById("search-box").value;
-    if (!searchTerm) {
-      return;
-    }
-  
-    const dropdown = document.querySelectorAll(".dropdown-item");
-    const relevantLinks = [];
-  
-    for (var i = 0; i < dropdown.length; i++) {
-      if (dropdown[i].innerHTML.includes(searchTerm)) {
-        relevantLinks.push(dropdown[i].href);
+  const badgeCards = document.querySelectorAll(".card-wrapper");
+  const badgeLinks = [];
+
+  for (var j = 0; j < badgeCards.length; j++) {
+    const badges = badgeCards[j].querySelectorAll(".badge");
+    const cardLink = badgeCards[j].querySelector("a");
+    const cardHref = cardLink.href;
+    for (var k = 0; k < badges.length; k++) {
+      if (badges[k].innerHTML.includes(searchTerm)) {
+        badgeLinks.push({
+          text: badges[k].innerHTML,
+          link: cardHref
+        });
       }
     }
-  
-    if (relevantLinks.length > 0) {
-      showLinks(relevantLinks, event);
-    } else {
-      showNoResultsMessage();
-    }
   }
-*/
+
+  if (relevantLinks.length > 0 || badgeLinks.length > 0) {
+    showLinks(relevantLinks, event);
+    showBadgeLinks(badgeLinks);
+  } else {
+    showNoResultsMessage();
+  }
+}
+
+  // פונקציה הצגת תוצאות חיפוש לינקים
+
+function showLinks(links, event) {
+  event.preventDefault();
+  const list = document.createElement('ul');
+  list.classList.add('list-group');
+  links.forEach(link => {
+    const item = document.createElement('li');
+    item.classList.add('list-group-item');
+    const a = document.createElement('a');
+    const dropdown = document.querySelectorAll(".dropdown-item");
+    let text = '';
+    for (var i = 0; i < dropdown.length; i++) {
+      if (dropdown[i].href === link) {
+        text = dropdown[i].innerHTML;
+        break;
+      }
+    }
+    a.href = link;
+    a.innerText = text;
+    a.classList.add('text-primary');
+    a.classList.add('font-weight-bold');
+    item.appendChild(a);
+    list.appendChild(item);
+  });
+  const searchDropdown = document.getElementById('search-dropdown');
+  searchDropdown.innerHTML = '';
+  searchDropdown.appendChild(list);
+  searchDropdown.classList.add('border', 'border-primary');
+  searchDropdown.style.display = 'block';
+  setTimeout(function() {
+    searchDropdown.style.display = 'none';
+    searchDropdown.innerHTML = '';
+    searchDropdown.classList.remove('border', 'border-primary');
+  }, 9500);
+}
+
+
+//פונקציה של חיפוש על פי מילות מפתח תגיות
+function showBadgeLinks(badgeLinks) {
+  const list = document.createElement('ul');
+  list.classList.add('list-group');
+  badgeLinks.forEach(link => {
+    const item = document.createElement('li');
+    item.classList.add('list-group-item');
+    const a = document.createElement('a');
+    a.href = link.link;
+    a.innerText = link.text;
+    a.classList.add('text-primary');
+    a.classList.add('font-weight-bold');
+    item.appendChild(a);
+    list.appendChild(item);
+  });
+  const searchDropdown = document.getElementById('search-dropdown');
+  searchDropdown.appendChild(list);
+}
+
+  // פונקציה לא נמצאו תוצאות חיפוש
+
+function showNoResultsMessage() {
+  const searchDropdown = document.getElementById("search-dropdown");
+  searchDropdown.innerHTML = '<li class="list-group-item">לא נמצאו תוצאות</li>';
+  searchDropdown.style.display = 'block';
+  setTimeout(() => {
+    searchDropdown.style.display = 'none';
+    searchDropdown.innerHTML = '';
+  }, 2000);
+}
+
+
+/*חיפוששששששששששששש
   
-//חיפושששש
 function searchFunc(event) {
   event.preventDefault();
   const searchTerm = document.getElementById("search-box").value;
@@ -127,8 +199,47 @@ function searchFunc(event) {
   } else {
     showNoResultsMessage();
   }
+
+  // Generate list items from badges
+  const badgeCards = document.querySelectorAll(".card-wrapper");
+  const badgeLinks = [];
+
+  for (var j = 0; j < badgeCards.length; j++) {
+    const badges = badgeCards[j].querySelectorAll(".badge");
+    const cardLink = badgeCards[j].querySelector("a");
+    const cardHref = cardLink.href;
+    for (var k = 0; k < badges.length; k++) {
+      if (badges[k].innerHTML.includes(searchTerm)) {
+        badgeLinks.push({
+          text: badges[k].innerHTML,
+          link: cardHref
+        });
+      }
+    }
+  }
+
+  if (badgeLinks.length > 0) {
+    showBadgeLinks(badgeLinks);
+  }
 }
 
+
+function showBadgeLinks(badgeLinks) {
+  const list = document.createElement('ul');
+  list.classList.add('list-group');
+  badgeLinks.forEach(link => {
+    const item = document.createElement('li');
+    item.classList.add('list-group-item');
+    const a = document.createElement('a');
+    a.href = link.link;
+    a.innerText = link.text;
+    a.classList.add('text-primary');
+    a.classList.add('font-weight-bold');
+    item.appendChild(a);
+    list.appendChild(item);
+  });
+  document.getElementById('search-dropdown').appendChild(list);
+}
 
 
 
@@ -178,11 +289,85 @@ function searchFunc(event) {
     }, 2000);
   }
   
-
-
+חיפוששששששששששש*/
 
 /*
-//פונקציית חיפוש
+//חיפוש טיוטה
+function searchFunc(event) {
+  event.preventDefault();
+  const searchTerm = document.getElementById("search-box").value;
+  if (!searchTerm) {
+    return;
+  }
+
+  const dropdownItems = document.querySelectorAll(".dropdown-item");
+  const relevantLinks = [];
+
+  for (var i = 0; i < dropdownItems.length; i++) {
+    // Skip submenu items
+    if (dropdownItems[i].closest('.submenu')) {
+      continue;
+    }
+    if (dropdownItems[i].innerHTML.includes(searchTerm)) {
+      relevantLinks.push(dropdownItems[i].href);
+    }
+  }
+
+  if (relevantLinks.length > 0) {
+    showLinks(relevantLinks, event);
+  } else {
+    showNoResultsMessage();
+  }
+}
+
+*/
+
+ /* שינוי צבע תפריט 
+window.onscroll = function() {
+    changeNavbarColor();
+  };
+
+ 
+  //שינוי צבע תפריט ניווט
+  function changeNavbarColor() {
+    var navbar = document.getElementById("navbar");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      navbar.classList.add("navbar-dark");
+      navbar.classList.remove("bg-light");
+    } else {
+      navbar.classList.add("bg-light");
+      navbar.classList.remove("navbar-dark");
+    }
+  }
+ */
+
+  /*
+  // פונקציית חיפוש
+  function searchFunc(event) {
+    event.preventDefault();
+    const searchTerm = document.getElementById("search-box").value;
+    if (!searchTerm) {
+      return;
+    }
+  
+    const dropdown = document.querySelectorAll(".dropdown-item");
+    const relevantLinks = [];
+  
+    for (var i = 0; i < dropdown.length; i++) {
+      if (dropdown[i].innerHTML.includes(searchTerm)) {
+        relevantLinks.push(dropdown[i].href);
+      }
+    }
+  
+    if (relevantLinks.length > 0) {
+      showLinks(relevantLinks, event);
+    } else {
+      showNoResultsMessage();
+    }
+  }
+*/
+/*
+//פונקציית חיפוש טיוטה
 function searchFunc(event) {
   event.preventDefault();
   const searchTerm = document.getElementById("search-box").value;
@@ -247,7 +432,7 @@ function showNoResultsMessage() {
 
 */
   /*
-  //פונקציית חיפוש
+  //פונקציית חיפוש טיוטה 
   function searchFunc() {
     const searchTerm = document.getElementById("search-box");
     // נמצא את כל הכותרות
@@ -267,7 +452,7 @@ function showNoResultsMessage() {
   
 */
 
- /*
+ /* חיפוש טיוטה
   function searchFunc() {
     // נמצא את תיבת הטקסט
     const searchWord = document.getElementById("search-box");
