@@ -413,7 +413,9 @@ margin-right: 18px;
     padding: 1rem;
   }
 
-  .card-title,
+ .card-title{
+  font-size: medium;
+ }
   .card-text {
     white-space: nowrap;
     overflow: hidden;
@@ -438,9 +440,6 @@ margin-right: 18px;
     object-position: bottom left;
     background-repeat: no-repeat;
   }
-
-
-
 
 }
 
