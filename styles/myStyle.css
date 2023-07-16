@@ -4,10 +4,10 @@
    /* font-family: 'Rubik', sans-serif;*/
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
 
-  
+
 
 }
 
@@ -40,14 +40,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
-
-  .header{
-    max-width: 100%;
+  header {
+    background-size: 1920px auto; /* Adjust the background-size for larger screens */
   }
-
 }
-
 
 @media (max-width: 1920px) {
   header {
@@ -55,34 +51,32 @@
     background-size: cover;
     max-width: 100%;
   }
-  }
-
-
-/*ראש עמוד*/
-.header{
-font-family: 'Rubik', sans-serif;
-background-image: url('../images/Group 255.png');
-background-repeat: no-repeat;
-background-size: cover;
-height: auto;
-/*background-position: center;*/
--moz-background-size: cover;
--o-background-size: cover;
 }
 
-.header img{
-  max-width: 70%;
+header {
+  font-family: 'Rubik', sans-serif;
+  background-image: url('../images/Group 255 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
+
 }
 
-.header h2 {
-  color:#050505!important;
+header img {
+  max-width: 60%!important;
+  height: auto!important;
+  margin-right: 30%;
+}
+
+header h2 {
+  color: #050505!important;
   font-weight: 600;
 }
 
-.header p {
+header p {
   color: #0d0d0d !important;
 }
+
 
 /*footer start*/
 .footer{
@@ -244,6 +238,7 @@ margin-inline-end: auto;
 
   
   /* תפריט ניווט*/
+
   .navbar {
     padding: 0.5rem 1rem;
     position: sticky;

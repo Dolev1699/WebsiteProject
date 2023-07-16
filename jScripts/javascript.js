@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
 
+ 
   // פונקציית חיפוש מאזין
 
   const searchBtn = document.getElementById("search-btn");
@@ -23,16 +24,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
    
 
-      //פונקצצייה לתפריט ניווט דרגה 2
+      // מתוך bootstrap-פונקצצייה לתפריט ניווט דרגה 2
 
       if (window.innerWidth < 992) {
 
-        // close all inner dropdowns when parent is closed
+        
         document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
           everydropdown.addEventListener('hidden.bs.dropdown', function () {
-            // after dropdown is hidden, then find all submenus
+            
               this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-                // hide every submenu as well
+             
                 everysubmenu.style.display = 'none';
               });
           })
@@ -42,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
           element.addEventListener('click', function (e) {
               let nextEl = this.nextElementSibling;
               if(nextEl && nextEl.classList.contains('submenu')) {	
-                // prevent opening link if link needs to open dropdown
                 e.preventDefault();
                 if(nextEl.style.display == 'block'){
                   nextEl.style.display = 'none';
@@ -69,10 +69,7 @@ function searchFunc(event) {
   const relevantLinks = [];
 
   for (var i = 0; i < dropdownItems.length; i++) {
-    // Skip submenu items
-    if (dropdownItems[i].closest('.submenu')) {
-      continue;
-    }
+    
     if (dropdownItems[i].innerHTML.includes(searchTerm)) {
       relevantLinks.push(dropdownItems[i].href);
     }
@@ -454,6 +451,8 @@ function showNoResultsMessage() {
 */
 
  /* חיפוש טיוטה
+
+
   function searchFunc() {
     // נמצא את תיבת הטקסט
     const searchWord = document.getElementById("search-box");
