@@ -5,11 +5,20 @@
 }
 
 /* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
 
+  
 
+  header h1{
+    margin-top: 2rem;
+  }
+  header h5 {
+ font-size: medium;
+  }
+ 
 
-}
+} 
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -53,19 +62,26 @@
   }
 }
 
+
+
 header {
   font-family: 'Rubik', sans-serif;
-  background-image: url('../images/Group 255 (1).png');
+  background-image: url('../images/Group 255 (4).png');
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
 
 }
 
+
+
 header img {
-  max-width: 60%!important;
+  max-width: 15%!important;
   height: auto!important;
-  margin-right: 30%;
+    position: absolute;
+    top: 7%;
+    right: 60%;
+    z-index: 1;
 }
 
 header h2 {
@@ -75,7 +91,11 @@ header h2 {
 
 header p {
   color: #0d0d0d !important;
+
 }
+
+
+
 
 
 /*footer start*/
@@ -353,7 +373,7 @@ margin-right: 18px;
 /*-------------  נעילת הרספונסיביות עד למינימום גודל מסויים - הגדרות מסך מובייל*/
 @media (max-width: 300px) {
  
-  html, body, .container, .the-index-page-cards-container, .card {
+  html, body, .container, .card {
     min-width: 300px !important;
   }
 
@@ -369,6 +389,10 @@ margin-right: 18px;
 .the-index-page-cards-container .col-sm-4 {
   flex: 0 0 100%;
   max-width: 100%;
+}
+
+.card-text {
+  display: none; /* Hide the <p> text */
 }
 
 .card {
