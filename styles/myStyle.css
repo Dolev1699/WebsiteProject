@@ -5,11 +5,14 @@
 }
 
 /* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
+  header{
 
+    background-image: url('../images/smallscreensHeader.png')!important;
+  }
   
 
-  header h1{
+  header h2{
     margin-top: 2rem;
   }
   header h5 {
@@ -49,28 +52,17 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  header {
-    background-size: 1920px auto; /* Adjust the background-size for larger screens */
-  }
-}
 
-@media (max-width: 1920px) {
-  header {
-    height: auto;
-    background-size: cover;
-    max-width: 100%;
-  }
 }
 
 
 
 header {
   font-family: 'Rubik', sans-serif;
-  background-image: url('../images/Group 255 (4).png');
+  background-image: url('../images/Frame 4.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   height: auto;
-
 }
 
 
@@ -83,6 +75,11 @@ header img {
     right: 60%;
     z-index: 1;
 }
+ header figure p{
+  right: 63%;
+  top:6%
+ }
+
 
 header h2 {
   color: #050505!important;
@@ -206,7 +203,7 @@ box-shadow: 0px 0px 10px 0px gray;
 border-radius: 20px;
 max-width:300px ;
 max-height:400px;
-min-height: 450px;
+min-height: 430px;
 }
 
 .cardInnerPage{
@@ -373,7 +370,7 @@ margin-right: 18px;
 /*-------------  נעילת הרספונסיביות עד למינימום גודל מסויים - הגדרות מסך מובייל*/
 @media (max-width: 300px) {
  
-  html, body, .container, .card {
+  html, body, .container, .the-index-page-cards-container, .card {
     min-width: 300px !important;
   }
 
