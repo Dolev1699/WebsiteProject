@@ -454,7 +454,6 @@
 	content: "\e96a";
 }
 
-}
 /*----------עיצוב לרייז לרשימה נפתחת----*/
 .blocks-accordion__container{
     direction: ltr!important;
@@ -470,6 +469,5 @@
 }
 
 .block-list__content p:last-child{
-	margin-right: 10%;
+    margin-right: 10%;
 }
-

@@ -5,7 +5,7 @@
 }
 
 /* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
   header{
 
     background-image: url('../images/smallscreensHeader.png')!important;
@@ -13,12 +13,15 @@
   
 
   header h2{
-    margin-top: 2rem;
+    margin-bottom: 2.5rem;
   }
   header h5 {
  font-size: medium;
   }
  
+  .the-index-page-cards-container{
+    margin-top: -6%!important;
+  }
 
 } 
 
@@ -33,7 +36,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
 
   /* עיצוב כרטיסיות בעמוד פנימי מסך קטן*/
   .card {
@@ -118,7 +121,7 @@ header p {
   font-size: 14px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   /* להסתיר את הטקסט בפוטר במסך קטן */
   .footerText,
   .footerText a {
@@ -355,6 +358,16 @@ margin-right: 18px;
 	}
 	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
 	.dropdown-menu > li:hover > .submenu{ display: block; }
+
+ .dropdown-menu ,.dropdown-item {
+    background-color: #ebf4ff;
+
+  }
+  .list-group-item ,.list-group-item a{
+
+    text-decoration: none!important;
+    color: #050505!important;
+  }
 }	
 /* ============ מסכים גדולים// ============ */
 
@@ -377,7 +390,7 @@ margin-right: 18px;
 }
   /* עיצוב כרטיסיות בעמוד פנימי מסך קטן*/
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
  /* הסתרת הטקסט בכרטיסיות והצגת התגיות בלבד*/
  .the-index-page-cards-container .card-wrapper .card .card-body .card-text {
   display: none;
