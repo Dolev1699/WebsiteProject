@@ -1,7 +1,8 @@
 ﻿body {
     direction: rtl;
     background-color:white;
-   /* font-family: 'Rubik', sans-serif;*/
+    font-family: 'Rubik', sans-serif!important;
+
 }
 
 /* Extra small devices (phones, 400px and down) */
@@ -61,7 +62,7 @@
 
 
 header {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif!important;
   background-image: url('../images/Frame 4.png');
   background-repeat: no-repeat;
   background-size:cover;
@@ -121,6 +122,16 @@ header p {
   font-size: 14px;
 }
 
+/*עיצוב של כפתור רייז*/
+.blocks-button--rounded .blocks-button__button .brand--ui{
+  font-family: 'Rubik', sans-serif!important;
+
+}
+
+
+
+
+
 @media (max-width: 991px) {
   /* להסתיר את הטקסט בפוטר במסך קטן */
   .footerText,
@@ -152,6 +163,11 @@ header p {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+/*עיצוב של שורת החיפוש*/
+.form-control{
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 18px!important;
+}
 
 /*כותרות בעמודים בפניימיים h4*/
 
