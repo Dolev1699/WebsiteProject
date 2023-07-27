@@ -6,7 +6,7 @@
 }
 
 /* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 700px) {
   header{
 
     background-image: url('../images/smallscreensHeader.png')!important;
@@ -55,15 +55,22 @@
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (max-width: 1281px) {
+  header {
+   
+    background-image: url('../images/Frame 4.png')!important;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: auto;
+  }
+  
 }
 
 
 
 header {
   font-family: 'Rubik', sans-serif!important;
-  background-image: url('../images/Frame 4.png');
+  background-image: url('../images/group 269.png');
   background-repeat: no-repeat;
   background-size:cover;
   height: auto;
@@ -72,15 +79,15 @@ header {
 
 
 header img {
-  max-width: 15%!important;
+  max-width: 12%!important;
   height: auto!important;
     position: absolute;
     top: 7%;
-    right: 60%;
+    right: 65%;
     z-index: 1;
 }
  header figure p{
-  right: 63%;
+  right: 68%;
   top:6%
  }
 
@@ -121,6 +128,7 @@ header p {
 .footer ul li {
   font-size: 14px;
 }
+
 
 /*עיצוב של כפתור רייז*/
 .blocks-button--rounded .blocks-button__button .brand--ui{
