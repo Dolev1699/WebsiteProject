@@ -5,8 +5,8 @@
 
 }
 
-/* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 700px) {
+/* Extra small devices (phones, 420px and down) */
+@media only screen and (max-width: 420px) {
   header{
 
     background-image: url('../images/smallscreensHeader.png')!important;
@@ -54,28 +54,40 @@
 }
 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1281px) {
+/* Extra large devices (large laptops and desktops, 1280px and up) */
+@media only screen and (max-width: 1280px) {
   header {
    
-    background-image: url('../images/Frame 4.png')!important;
+    background-image: url('../images/Frame 5.png');
+
     background-repeat: no-repeat;
     background-size:cover;
     height: auto;
   }
+  header img {
+    max-width: 14%!important;
+      top: 10%!important;;
+  }
+   header figure p{
+    top:9%!important;
+   }
   
+}
+
+@media only screen and (min-width: 1281px) {
+  header {
+    background-image: url('../images/group 269.png');
+  }
 }
 
 
 
 header {
   font-family: 'Rubik', sans-serif!important;
-  background-image: url('../images/group 269.png');
   background-repeat: no-repeat;
   background-size:cover;
   height: auto;
 }
-
 
 
 header img {
@@ -174,7 +186,7 @@ header p {
 /*עיצוב של שורת החיפוש*/
 .form-control{
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 18px!important;
+  border-radius: 12px!important;
 }
 
 /*כותרות בעמודים בפניימיים h4*/
@@ -226,7 +238,7 @@ max-width: 20%;
 .card{
   border-color: gray;
 --bs-card-border-width: 0px;
-box-shadow: 0px 0px 10px 0px gray;
+box-shadow: 0px 0px 8px 0px gray;
 border-radius: 20px;
 max-width:300px ;
 max-height:400px;
