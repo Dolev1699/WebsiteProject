@@ -7,6 +7,15 @@
 
 /* Extra small devices (phones, 420px and down) */
 @media only screen and (max-width: 420px) {
+ footer{
+  background-image: url('../images/smalScreenFooter.png')!important;
+
+ }
+
+ .footerText{
+  padding-top: 3rem!important;
+}
+
   header{
 
     background-image: url('../images/smallscreensHeader.png')!important;
@@ -78,6 +87,9 @@
   header {
     background-image: url('../images/group 269.png');
   }
+  header img {
+    max-width: 12%!important;
+  }
 }
 
 
@@ -91,7 +103,6 @@ header {
 
 
 header img {
-  max-width: 12%!important;
   height: auto!important;
     position: absolute;
     top: 7%;
